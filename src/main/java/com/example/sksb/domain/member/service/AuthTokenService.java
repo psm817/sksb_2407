@@ -1,5 +1,6 @@
 package com.example.sksb.domain.member.service;
 
+
 import com.example.sksb.domain.member.entity.Member;
 import com.example.sksb.global.app.AppConfig;
 import io.jsonwebtoken.Claims;
