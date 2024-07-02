@@ -35,6 +35,8 @@ public class Member {
 
     private String password;
 
+    private String refreshToken;
+
     public List<String> getAuthoritiesAsStringList() {
         return List.of("ROLE_MEMBER");                  // 기본 권한을 가진 멤버
     }
