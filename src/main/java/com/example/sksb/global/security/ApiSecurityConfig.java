@@ -30,16 +30,13 @@ public class ApiSecurityConfig {
                         csrf -> csrf
                                 .disable()
                 )
-                .cors(
-                        cors -> cors.configure(http)
+                .cors(cors -> cors
+                        .configure(http)
                 )
                 // 세션 관련 다 꺼줌
                 .sessionManagement(
                         sessionManagement -> sessionManagement
                                 .disable()
-                )
-                .cors(cors -> cors
-                        .configure(http)
                 )
                 // 앞 단에 jwt 필터를 걸어줌
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
